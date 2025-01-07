@@ -315,6 +315,18 @@ router.put('/edit_employee/:id', (req, res) => {
     })
 })
 
+router.put('/edit_employeeImg/:id', upload.single('image'), (req, res) => {
+    const id = req.params.id;
+    const image = req.file ? req.file.filename : req.body.image;
+    const sql = ` UPDATE employee 
+        set image = ? 
+        where id = ? `
+    con.query(sql, [image, id], (err, result) => {
+        if(err) return res.json({Status: false, Error: "Query Error"+err})
+        return res.json({Status: true, Result: result})
+    })
+})
+
 router.put('/edit_employee_password/:id', (req, res) => {
     const id = req.params.id;
     const sql = `UPDATE employee 

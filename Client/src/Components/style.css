@@ -29,14 +29,14 @@ ul li :hover {
 }
 
 .custom-btn-black {
-    color: black !important; /* Text color */
-    border-color: black !important; /* Border color */
+    color: black !important; 
+    border-color: black !important;
 }
 
 .custom-btn-black:hover {
-    background-color: black !important; /* Background color on hover */
-    color: white !important; /* Text color on hover */
-    border-color: black !important; /* Keep border color black */
+    background-color: black !important; 
+    color: white !important; 
+    border-color: black !important; 
 }
 
   
@@ -108,15 +108,34 @@ ul li :hover {
     height: 90vh;
     background-color: #dffaff8c ;
 }
-h3 {
-    color: #333; /* Dark color for readability */
-    font-size: 1.5rem; /* Slightly larger font size */
-    text-align: center; /* Center align the text */
-}
 
 h3 .fw-bold {
-    color: #000000; /* A blue color for the name to stand out */
+    color: #000000;
 }
+
+.emp-det-image {
+    width: 350px;           
+    height: 350px;          
+    object-fit: cover;      
+}
+
+.edit-profile-btn {
+    font-size: 0.8rem;         
+    padding: 8px 16px;       
+    border-radius: 20px;     
+    transition: 0.3s ease;  
+}
+
+.edit-profile-btn:hover {
+    background-color: #007bff; 
+    color: white;              
+    border-color: #0056b3;   
+}
+
+.btn {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
 
 /* EmployeeEdit */
 /* Overlay background */
@@ -126,12 +145,12 @@ h3 .fw-bold {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark background */
-    backdrop-filter: blur(5px); /* Blur effect */
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Ensure it appears above other content */
+    z-index: 9999; 
 }
 
 /* Password modal styling */
