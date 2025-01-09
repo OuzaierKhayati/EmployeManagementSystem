@@ -9,6 +9,7 @@ const Login = () => {
         email: '',
         password: ''
     });
+    const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState(null);
     const [captchaValue, setCaptchaValue] = useState(null);
     const navigate = useNavigate();
@@ -66,13 +67,23 @@ const Login = () => {
                     </div>
                     <div className='mb-3'>
                         <label htmlFor="password"><strong>Password:</strong></label>
-                        <input
-                            type="password"
-                            name='password'
-                            placeholder='Enter Password'
-                            onChange={(e) => setValues({ ...values, password: e.target.value })}
-                            className='form-control rounded-0'
-                        />
+                        <div className='input-group'>
+                            <input
+                                type = {showPassword ? "text" : "password"}
+                                name ='password'
+                                placeholder='Enter Password'
+                                onChange={(e) => setValues({ ...values, password: e.target.value })}
+                                className='form-control rounded-0'
+                            />
+                            <button
+                                type='button'
+                                className="btn input-group-text custom-btn-black"
+                                onClick={() => setShowPassword(!showPassword)}
+                                style={{ border: "2px solid black"}}
+                            >
+                                <i className={`bi ${ !showPassword ? "bi-eye-slash" : "bi-eye"}`}></i>
+                            </button>
+                        </div>
                     </div>
 
                     {/* reCAPTCHA v2 Widget */}

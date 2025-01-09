@@ -14,9 +14,9 @@ const EditEmployee = () => {
     category_id: '',
   });
   const [category, setCategory] = useState([]);
-  const [showPasswordModal, setShowPasswordModal] = useState(false); // State to control the modal visibility
+  const [showPasswordModal, setShowPasswordModal] = useState(false); 
   const [newPassword, setNewPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false); // State to control password visibility
+  const [showPassword, setShowPassword] = useState(false); 
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [ShowProject, setShowProject] = useState(false);
   const navigate = useNavigate();
@@ -299,11 +299,11 @@ const EditEmployee = () => {
                     required
                   />
                   <span className="input-group-text custom-btn-black" onClick={() => setShowPassword(!showPassword)}>
-                    <i className={`bi ${showPassword ? 'bi-eye-slash' : 'bi-eye'}`}></i>
+                    <i className={`bi ${showPassword ? 'bi-eye' : 'bi-eye-slash'}`}></i>
                   </span>
                 </div>
               </div>
-              <button type="submit" className="btn btn-success">Submit</button>
+              <button type="submit" className="btn btn-success">Save</button>
               <button type="button" className="btn btn-secondary" onClick={() => setShowPasswordModal(false)}>Cancel</button>
             </form>
           </div>
