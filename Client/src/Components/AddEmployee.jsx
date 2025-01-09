@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./style.css";
@@ -148,12 +148,6 @@ const AddEmployee = () => {
               className: 'custom-toastError',
               progressClassName: 'custom-progressError',
             });
-            // Handle cases where `Error` might be an object or a simple message
-            // alert(
-            //   typeof result.data.Error === "string"
-            //     ? result.data.Error
-            //     : JSON.stringify(result.data.Error)
-            // );
           }
         })
         .catch((err) => {
@@ -170,7 +164,6 @@ const AddEmployee = () => {
               className: 'custom-toastError',
               progressClassName: 'custom-progressError',
           });
-          // alert("Failed to add employee. Please check the console for more details.");
         });
     }else{
       alert("Please fill in all fields.")
@@ -181,7 +174,10 @@ const AddEmployee = () => {
 
   return (
     <div className="d-flex justify-content-center align-items-center mt-3">
-      <div className="p-3 rounded w-50 border">
+      <div className="p-3 rounded w-50 border border-black bg-light shadow">
+        <Link to={'/dashboard/employee'} className="btn custom-btn-view">
+            <i className="bi bi-arrow-left"></i>
+        </Link>
         <h3 className="text-center">Add Employee</h3>
         <form className="row g-1" onSubmit={handleSubmit}>
           <div className="col-12">

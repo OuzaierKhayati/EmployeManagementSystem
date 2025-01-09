@@ -238,7 +238,7 @@ const Home = () => {
     }, [projects]);
 
   return (
-    <div className='border-success'>
+    <div className='border-success' style={{overflowX: "hidden"}}>
       <h1 className="text-center mt-3 mb-4">Admin Dashboard</h1>
       <div className='p-3 d-flex justify-content-around mt-3 mb-3'>
         <div className='px-3 pt-2 pb-3 border border-2 border-black shadow-sm' style={{width: "280px"}}>
@@ -284,11 +284,11 @@ const Home = () => {
       </div>
       <hr className='mt-4 mb-4'/>
       <div className="row">
-        <div className="col-md-6 md-5">
+        <div className="col-md-6 col-12 ms-5">
           <h3 className="text-center text-black">Projects Overview</h3>
           <canvas ref={projectOverviewRef}></canvas>
         </div>
-        <div className="col-md-5 ms-5">
+        <div className="col-md-5 col-12">
           <h3 className="text-center text-black">Profit</h3>
           <canvas ref={projectProfitRef}></canvas>
         </div>

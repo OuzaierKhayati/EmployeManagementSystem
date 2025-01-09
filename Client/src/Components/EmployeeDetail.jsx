@@ -91,7 +91,7 @@ const EmployeeDetail = () => {
               to={`/employee_detail/employee_edit/` + id}
               className="btn custom-btn-view me-2"
             >
-              Check <i className="bi bi-eye"></i>
+              Profile <i className="bi bi-person"></i>
             </Link>
             <button className="btn btn-danger" onClick={handleLogout}>Logout</button>
         </div>

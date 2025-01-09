@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./style.css";
@@ -67,8 +67,11 @@ const AddAdmin = () => {
 
     return (
         <div className='d-flex justify-content-center align-items-center h-75'>
-            <div className='p-3 rounded w-50 border'>
-                <h2>Add Admin</h2>
+            <div className='p-3 rounded w-50 border border-black bg-light shadow'>
+                <Link to={'/dashboard'} className="btn custom-btn-view">
+                    <i className="bi bi-arrow-left"></i>
+                </Link>
+                <h2 className='text-center'>Add Admin</h2>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <div className='d-flex flex-column mb-3'>
@@ -104,7 +107,7 @@ const AddAdmin = () => {
                             </div>
                         </div>
                     </div>
-                    <button className='btn btn-success w-100 rounded-0 mb-2'>Add Admin</button>
+                    <button className='btn btn-success w-100 rounded-2 mb-2'>Add Admin</button>
                 </form>
             </div>
         </div>

@@ -78,7 +78,7 @@ const Category = () => {
                                         <span>{c.name}</span>
                                         <div className="ms-auto d-flex">
                                             <button 
-                                                className="btn btn-info btn-sm edit-btn"
+                                                className="btn btn-primary btn-sm edit-btn"
                                                 onClick={() => {
                                                     setEditingId(c.id);
                                                     setNewCategory(c.name);
@@ -88,7 +88,7 @@ const Category = () => {
                                                 Edit
                                             </button>
                                             <button 
-                                                className="btn btn-warning btn-sm ms-1"
+                                                className="btn btn-danger btn-sm ms-1"
                                                 onClick={() => deleteCategory(c.id)}
                                             >
                                                 Delete

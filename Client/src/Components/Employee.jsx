@@ -63,12 +63,12 @@ const Employee = () => {
                 <td>
                   <Link
                     to={`/dashboard/edit_employee/` + e.id}
-                    className="btn btn-info btn-sm me-2"
+                    className="btn btn-primary btn-sm me-2"
                   >
                     Edit
                   </Link>
                   <button
-                    className="btn btn-warning btn-sm"
+                    className="btn btn-danger btn-sm"
                     onClick={() => handleDelete(e.id)}
                   >
                     Delete

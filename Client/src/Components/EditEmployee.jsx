@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 
 const EditEmployee = () => {
     const {id} = useParams()
@@ -51,7 +51,10 @@ const EditEmployee = () => {
     
   return (
     <div className="d-flex justify-content-center align-items-center mt-3">
-      <div className="p-3 rounded w-50 border">
+      <div className="p-3 rounded w-50 border border-black bg-light shadow">
+        <Link to={'/dashboard/employee'} className="btn custom-btn-view">
+            <i className="bi bi-arrow-left"></i>
+        </Link>
         <h3 className="text-center">Edit Employee</h3>
         <form className="row g-1" onSubmit={handleSubmit}>
           <div className="col-12">
@@ -117,7 +120,7 @@ const EditEmployee = () => {
               }
             />
           </div>
-          <div className="col-12">
+          <div className="col-12 mb-3">
             <label htmlFor="category" className="form-label">
               Category
             </label>

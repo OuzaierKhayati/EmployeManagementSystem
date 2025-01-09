@@ -143,7 +143,7 @@ const EditProject = () => {
     
   return (
     <div className="d-flex justify-content-center align-items-center mt-3">
-      <div className="p-3 rounded w-50 border border-black">
+      <div className="p-3 rounded w-50 border border-black bg-light shadow">
         <div className="d-flex justify-content-between align-items-center mt-3">
             <Link 
             to={`/dashboard/projects/`}

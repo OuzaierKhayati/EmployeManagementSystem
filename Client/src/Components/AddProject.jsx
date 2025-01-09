@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./style.css";
@@ -128,7 +128,10 @@ const AddEmployee = () => {
 
   return (
     <div className="d-flex justify-content-center align-items-center mt-3">
-      <div className="p-3 rounded w-50 border border-black">
+      <div className="p-3 rounded w-50 border border-black bg-light shadow">
+        <Link to={'/dashboard/projects'} className="btn custom-btn-view">
+            <i className="bi bi-arrow-left"></i>
+        </Link>
         <h3 className="text-center">Add Project</h3>
         <form className="row g-1" onSubmit={handleSubmit}>
           <div className="col-12">
@@ -177,7 +180,7 @@ const AddEmployee = () => {
                 className="form-control"
                 placeholder="Start typing employee name..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)} // Update search term
+                onChange={(e) => setSearchTerm(e.target.value)} 
               />
             </div>
 
@@ -190,7 +193,7 @@ const AddEmployee = () => {
                       <li
                         className="customListItem"
                         key={id}
-                        onClick={() => handleAddEmployee(e.email)} // Add employee when clicked
+                        onClick={() => handleAddEmployee(e.email)} 
                         style={{ cursor: "pointer" }}
                       >
                         {e.name}: {e.email}
@@ -272,7 +275,7 @@ const AddEmployee = () => {
             />
           </div>
           <div className="col-12 mt-3">
-            <button type="submit" className="btn btn-primary w-100 ">
+            <button type="submit" className="btn btn-success w-100 ">
               Add Project
             </button>
           </div>
